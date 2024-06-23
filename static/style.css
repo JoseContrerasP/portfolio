@@ -265,3 +265,8 @@ img {
   border-style: solid;
   border-color: black transparent transparent transparent;
 }*/
+
+#contact_success {
+	min-height: 100vh;
+	height: 100%;
+}
