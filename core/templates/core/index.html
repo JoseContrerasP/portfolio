@@ -6,7 +6,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container flex-lg-column">
       
-      <div class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+      <div class="navbar-brand mx-lg-auto mb-lg-4">
           <span class="h3 fw-bold d-block d-lg-none">José Contreras</span>
           <img src="{% static 'core/images_p/jose_ft.jpeg' %}" alt="" class="d-none d-lg-block rounded-circle">
       </div>
@@ -97,7 +97,7 @@
             <div class="col-lg-5 col-md-6" data-aos="fade-up">
               <div class="card-custom rounded-4 bg-base shadow-effect">
                 <div class="card-custom-image rounded-4">
-                  <img src="{% static 'core/images_p/project-1.jpg' %}" class="rounded-4" alt="">
+                  <img src="{% static 'core/images_p/isometric-web-pages-mockup.png' %}" class="rounded-4" alt="">
                 </div>
                 <div class="card-custom-content p-4">
                   <h4>KoaDeals</h4>
@@ -152,7 +152,7 @@
             <!-- <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Education</h3> -->
             <div class="row gy-4">
 
-              <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
                 <div class="bg-base p-4 rounded-4 shadow-effect">
                   <h4>Backend Bootcamp with Python</h4>
                   <p class="text-brand mb-2">Códigofacilito (2022 – 2023)</p>
@@ -162,7 +162,7 @@
                 </div>
               </div>
 
-              <div class="col-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                 <div class="bg-base p-4 rounded-4 shadow-effect">
                   <h4>Cybersecurity Assistant</h4>
                   <p class="text-brand mb-2">INFOTEP (2022 – 2023)</p>
@@ -172,23 +172,34 @@
                 </div>
               </div>
 
-              <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
                 <div class="bg-base p-4 rounded-4 shadow-effect">
                   <h4>Course for Consuming APIs with Python</h4>
                   <p class="text-brand mb-2">Códigofacilito (2022 – 2023)</p>
-                  <p class="mb-2">Where I learned to consume and create APIs with Django REST according to the REST protocol.</p>
+                  <p class="mb-2">Where I learned to consume and create APIs with Django REST Framework according to the REST architectural principles.</p>
 
                   <a href="{% static 'core/documents/Certificado - Curso para consumir APIs con Python.pdf' %}" class="link-custom" target="_blank">Certificate</a>
                 </div>
               </div>
-              
-              <div class="col-6" data-aos="fade-up" data-aos-delay="600">
+
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                 <div class="bg-base p-4 rounded-4 shadow-effect">
                   <h4>PCAP: Programming Essentials In Python</h4>
                   <p class="text-brand mb-2">Cisco Networking Academy (2020 – 2021)</p>
                   <p class="mb-2">My first "official" curse of Python, this is where I learnt most of the language, from the basic syntax to the OOP.</p>
 
                   <p class="link-custom-disable mb-0">Certificate</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-base p-4 rounded-4 shadow-effect">
+                  <h4>Nginx Introductory Course</h4>
+                  <p class="text-brand mb-2">Códigofacilito (2024 – 2025)</p>
+                  <p class="mb-2">This is a very complete course that covers topics such as the main directives and contexts, the default configuration, virtual host configuration, error pages, reverse proxies, FastCGI, load balancing, SSL certificates, and more.</p>
+
+
+                  <a href="{% static 'core/documents/Certificado - Curso de introducción a Nginx.pdf' %}" class="link-custom" target="_blank">Certificate</a>
                 </div>
               </div>
 
@@ -237,9 +248,6 @@
                   <button type="submit" class="btn btn-brand">Contact me</button>
                 </div>
               </form>
-
-              <!-- <a href="https://formsubmit.co/el/regowa" target="_blank">Email Me</a> -->
-
             </div>
             
           </div>

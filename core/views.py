@@ -1,24 +1,24 @@
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 
 
 def index(request):
     if request.method == "POST":
         name = request.POST["name"]
-        email = request.POST["email"]
+        sender = (request.POST["email"],)
         subject = request.POST["subject"]
         message = request.POST["message"]
-        receiver = [
-            "jose.contreras.p25@gmail.com",
-        ]
+        receiver = ("jose.contreras.p25@gmail.com",)
 
-        send_mail(
-            subject,
-            message,
-            email,
-            receiver,
-            fail_silently=False,
+        email = EmailMessage(
+            subject=subject,
+            body=message,
+            from_email=receiver[0],
+            to=receiver,
+            reply_to=sender
         )
+
+        email.send()
 
         return redirect("contact_success")
 
