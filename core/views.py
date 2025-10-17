@@ -15,7 +15,7 @@ def index(request):
             body=message,
             from_email=receiver[0],
             to=receiver,
-            reply_to=sender
+            reply_to=sender,
         )
 
         email.send()
@@ -24,6 +24,7 @@ def index(request):
 
     else:
         return render(request, "core/index.html")
+        # return render(request, "core/index2.html")
 
 
 def contact_success_view(request):

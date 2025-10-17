@@ -194,6 +194,52 @@ img {
 	width: 19%;
 }
 
+.filter-btn {
+	font-weight: 700;
+	position: relative;
+	color: var(--color-heading);
+	background-color: var(--color-base2);
+	border: none;
+}
+
+.filter-btn::after {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: var(--color-brand);
+	position: absolute;
+	left: 0;
+	top: 110%;
+	transition: all 0.4s;
+}
+
+.filter-btn:hover::after {
+	width: 100%;
+}
+
+.filter-buttons .active {
+	color: var(--color-brand);
+}
+
+.filter-buttons .active::after {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: var(--color-brand);
+	position: absolute;
+	left: 0;
+	top: 110%;
+	transition: all 0.4s;
+}
+
+.filter-buttons .active::after {
+	width: 100%;
+}
+
+/*.filter-buttons .active {
+
+}*/
+
 /* CARD */
 
 .card-custom .card-custom-image {

@@ -5,7 +5,7 @@ AOS.init({
 	delay: 0,
 	duration: 700,
 	easing: "ease",
-	once: false,
+	once: true,
 	mirror: false,
 	anchorPlacement: "top-bottom",
 })
@@ -24,4 +24,35 @@ document.querySelectorAll(".copy-link").forEach(copyLinkContainer => {
 		inputField.value = "Copied!";
 		setTimeout(() => inputField.value = text, 2000)
 	})
+});
+
+
+// buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remover clase active de todos los botones
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Agregar clase active al botón clickeado
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            courseCards.forEach(card => {
+                if (filterValue === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(filterValue)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
 });
