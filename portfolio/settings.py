@@ -14,10 +14,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", default="your secret key")
 
-DEBUG = os.environ.get("DEBUG")
+# DEBUG = os.environ.get("DEBUG")
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["portfolio.pylink.fit"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://portafolio.pylink.fit',
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
